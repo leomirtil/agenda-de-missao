@@ -93,9 +93,17 @@ rolagem lateral**. Com Playwright, meça `document.documentElement.scrollWidth`.
 
 ## Com o Claude
 O `CLAUDE.md` deste repositório é o "diário da missão". Preencha no início, e o Claude Code atualiza a cada
-sessão com decisões, IDs de compromissos e pendências. Funciona junto com a skill **`agenda-de-missao`**,
-que conduz a entrevista inicial, as rotinas diárias de e-mail, os roteiros de fala e o relatório de
-prestação de contas.
+sessão com decisões, IDs de compromissos e pendências.
+
+O repositório traz a skill **`agenda-de-missao`**. Ela conduz a entrevista inicial e cuida das rotinas
+diárias de e-mail, dos roteiros de fala, dos materiais de divulgação e do relatório de prestação de contas.
+
+- **Claude Code:** a skill fica em `.claude/skills/agenda-de-missao/` e carrega sozinha ao abrir o
+  repositório. Peça, por exemplo: "monte a agenda da minha missão".
+- **claude.ai (navegador ou app):** baixe `skill/agenda-de-missao.skill` e envie em
+  Configurações → Capabilities → Skills. Ou abra o arquivo numa conversa e clique em "Save skill".
+- **Ao alterar a skill:** edite a pasta `.claude/skills/agenda-de-missao/` e gere de novo o `.skill`. Ele é um
+  zip da pasta: `cd .claude/skills && zip -r ../../skill/agenda-de-missao.skill agenda-de-missao`.
 
 ## Seção opcional do hotsite: dois indicadores lado a lado
 `DECOUPLING` em `src/hotsite/content.js` desenha as barras do `CURVE` com linhas de outros indicadores
